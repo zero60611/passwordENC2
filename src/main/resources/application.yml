@@ -1,0 +1,31 @@
+server:
+  port: 9091
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;database=SMALL_YANG;trustServerCertificate=true
+    username: sa
+#    password: P@ssw0rd
+#    password: ENC(O/tqWrCwPn2Lme5kJXCWNf7TrQT9wlCejBJA4aeurwVo4zu8P1RMg0JLw8Wa7Rgr)
+    password: O/tqWrCwPn2Lme5kJXCWNf7TrQT9wlCejBJA4aeurwVo4zu8P1RMg0JLw8Wa7Rgr
+    hikari:
+      pool-name: Hikari
+      auto-commit: false
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        useServerPrepStmts: true
+
+#jasypt:
+#  encryptor:
+#    password: ${JASYPT_ENCRYPTOR_PASSWORD}
+#    password: CodeSheep
+#     password:
+#    bean: codeSheepEncryptorBean
+#    jasypt:
+#      encryptor:
+#        password=${JASYPT_ENCRYPTOR_PASSWORD:}:
+#    password: ${JASYPT_ENCRYPTOR_PASSWORD:}
+
